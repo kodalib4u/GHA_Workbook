@@ -1,7 +1,15 @@
 name: GS_Firstexample_Hello World
 on: workflow_dispatch
 jobs:
-  demo1:
+  Build:
    runs-on: ubuntu-latest
    steps:
-     - run: echo "Welcome to GitHubActions"
+     - run: echo "Build Job"
+  Test:
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo "Test the build"
+  Deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo "Deploy the image to app"
