@@ -7,9 +7,11 @@ jobs:
      - run: echo "Build Job"
   Test:
    runs-on: ubuntu-latest
+   needs: Build
    steps:
      - run: echo "Test the build"
   Deploy:
    runs-on: ubuntu-latest
+   needs: Test
    steps:
      - run: echo "Deploy the image to app"
